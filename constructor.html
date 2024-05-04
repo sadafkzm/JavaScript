@@ -1,0 +1,25 @@
+<html>
+<body>
+<script>
+//parent class
+class School{
+	constructor(){
+		this.schoolname="Anudip Foundation ";
+	}
+}
+//child class
+class Student extends School{
+	constructor(sid, sname, seduc){
+		super(); //parent constructor
+		this.sid=sid;
+		this.sname=sname;
+		this.seduc=seduc;
+	}
+}
+//child object
+var s1=new Student(101, 'ssss','bscit');
+document.write(s1.sid+" "+ s1.sname+" "+s1.seduc+" "+s1.schoolname);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+class Parent{
+	display(){
+		document.write("I am parent ");
+	}
+}
+class Child extends Parent{
+	display(){
+		document.write("I am child ");
+	}
+}
+var aa=[new Parent(), new Child()]
+aa.forEach(function(m){
+m.display();
+});
+</script>

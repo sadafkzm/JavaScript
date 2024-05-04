@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+//declare classs
+class Employee {
+	//initialize an object
+	constructor(eid, ename, edept){
+		this.eid =eid;
+		this.ename =ename;
+		this.edept =edept;
+	}
+	//method
+	showDetails(){
+		document.write("Employee details : " + this.eid +" "+this.ename +" "+ this.edept +"<br>");
+	}
+}
+//passing object to emp1 & emp2
+var emp1 = new Employee(11, 'abc','training');
+var emp2 = new Employee(12,'cde','HR');
+
+//invoke method
+emp1.showDetails();
+emp2.showDetails();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<!--object={property:value, ......}-->
+<!--var objname= new Object() -->
+<script>
+emp1={id:101, name:"abc",dept:"it",edu:"bscit"}
+document.write(emp1.id+" "+ emp1.name);
+console.log(emp1.dept);
+alert("hiiiiiii ");
+</script>
+<br>
+<script>
+var student = new Object();
+student.sid=1;
+student.sname="mamta";
+document.write(student.sid +" "+ student.sname);
+</script>
+<br>
+<script>
+function display(prdid, prdname, price){
+this.prdid=prdid;
+this.prdname=prdname;
+this.price=price;
+}
+obj=new display(111,"pen",30);
+document.write(obj.prdid +" "+obj.prdname+" "+obj.price);
+</script>
+</body>
+</html>

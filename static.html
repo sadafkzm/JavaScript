@@ -1,0 +1,28 @@
+<html>
+<body>
+<script>
+class Test{
+//static
+	static show(){
+		return "I am static method in js <br>";
+	}
+	static display(){
+		name="abc";
+		return "My name : " + name + "<br>";
+	}
+//non static
+	hello(){
+		document.write(" good evening ");
+	}
+}
+//invoke static method
+document.write(Test.show());
+document.write(Test.display());
+
+//invoke non static
+var s = new Test();
+s.hello();
+
+</script>
+</body>
+</html>

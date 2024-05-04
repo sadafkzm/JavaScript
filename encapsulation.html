@@ -1,0 +1,38 @@
+<html>
+<body>
+<script>
+class Product{
+	constructor(){
+		var name, price;
+	}
+	//getter-setter
+	getName(){
+		return this.name;
+	}
+	setName(name){
+		this.name=name;
+	}
+	getPrice(){
+		return this.price;
+	}
+	setPrice(price){
+		this.price=price;
+	}
+}
+//object creation 
+var p1=new Product();
+var p2=new Product();
+
+//assign value using setter
+p1.setName("Pencil");
+p1.setPrice("Rs.15");
+p2.setName("NoteBook");
+p2.setPrice("Rs.40");
+
+//print using getter
+document.write("Name : " + p1.getName()+" Price : "+ p1.getPrice() + "<br>");
+document.write("Name : "+p2.getName()+" Price : "+ p2.getPrice() + "<br>");
+
+</script>
+</body>
+</html>

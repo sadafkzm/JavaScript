@@ -1,0 +1,28 @@
+<html>
+<body>
+<script>
+//parent class
+class Person{
+	//parent constructor
+	constructor(){
+		this.name="John";
+		this.addr="Mumbai";
+	}
+}
+//child class
+class Student extends Person{
+	constructor(educ, email, passout){ //child constructor
+		super(); //parent constructor
+		this.educ=educ;
+		this.email=email;
+		this.passout=passout;
+	}
+}
+//child object
+var s = new Student("XI","john@gmail.co",2025);
+//invoke child & parent property
+document.write(s.name +" "+ s.addr +" "+ s.educ +" "+ s.email
++" "+s.passout);
+</script>
+</body>
+</html>
