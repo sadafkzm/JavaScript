@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+//create constrcutor function
+	function vehicle(){
+		this.name = "abccc";
+	}
+	vehicle.prototype.display=function(){
+		return "Vehicle name : "+this.name;
+	}
+	
+	//another constrcutor
+	function Car(name){
+		this.name=name;
+	}
+	//create object without using constrcutor function
+	Car.prototype=Object.create(vehicle.prototype);
+	var carr = new Car("BMW");
+	document.write(carr.display())
+</script>
+</body>
+</html>

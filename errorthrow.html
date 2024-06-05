@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+function checkFunc(){
+const message = document.getElementById("aa");
+message.innerHTML= "";
+let num= document.getElementById("pp").value;
+try{
+if(num.trim()=="") throw "its empty";
+if(isNaN(num)) throw "it is not a number";
+num = Number(num);
+if(num>5 && num<20) throw "low number";
+if(num>40 && num<80) throw "high number"
+}catch(err){
+message.innerHTML= " Input " + err;
+}
+finally{
+document.getElementById("pp").value="";
+}
+}
+</script>
+<h1> enter number without 20-40 </h1>
+<input type="text" id="pp" required><button onclick="checkFunc()">Check </button>
+<p id="aa"></p>
+</body>
+</html>

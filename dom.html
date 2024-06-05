@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+#container{
+width:400px;
+height:400px;
+position:relative;
+background-color : grey;
+}
+
+#animate{
+width:50px;
+height:50px;
+position:absolute;
+background-color : pink;
+}
+</style>
+</head>
+<body>
+<h1 id="aa"> Hello World  </h1>
+<p><button onclick="mooo()">Click </button></p>
+
+<div id="container">
+	<div id="animate"></div>
+</div>
+<script>
+document.getElementById("aa").style.color="Blue";
+document.getElementById("aa").style.fontFamily="Arial";
+</script>
+<script>
+function mooo(){
+let id=null;
+const elem=document.getElementById("animate");
+let pos=0;
+clearInterval(id);
+id=setInterval(frame,3);
+
+function frame(){
+if (pos==300){
+clearInterval(id);
+}else{
+pos++;
+elem.style.top=pos+ "px";
+elem.style.left=pos+ "px";
+}
+}
+}
+</script>
+</body>
+</html>

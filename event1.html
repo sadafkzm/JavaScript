@@ -1,0 +1,35 @@
+<html>
+<body>
+<button id="btn"> Click me </button>
+<p id="paa"></p>
+
+<script>
+function f1(){
+btn.style.width="40px";
+btn.style.height="40px";
+btn.style.background="grey";
+btn.style.color="green";
+btn.style.padding="15px";
+}
+
+function f2(){
+document.getElementById("paa").innerHTML = "Hello, Good Morning";
+}
+
+function f3(){
+btn.style.width="80px";
+btn.style.height="80px";
+btn.style.background="yellow";
+btn.style.color="red";
+btn.style.padding="10px";
+}
+
+var b= document.getElementById("btn");
+b.addEventListener("mouseover",f1);
+b.addEventListener("dblclick",f2);
+b.addEventListener("mouseout",f3)
+
+</script>
+
+</body>
+</html>

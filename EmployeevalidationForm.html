@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Registration Form</h2>
+        <form id="employeeForm" onsubmit="return validateForm()">
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName">
+                    <span id="firstNameError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName">
+                    <span id="lastNameError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+                    <span id="phoneNumberError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea class="form-control" id="address" name="address" rows="3"></textarea>
+                    <span id="addressError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" class="form-control" id="dob" name="dob">
+                    <span id="dobError" class="error"></span>
+                </div>
+            </fieldset>
+
+            <!-- Education Details -->
+            <fieldset>
+                <legend>Education Details</legend>
+                <div class="form-group">
+                    <label for="degree">Degree:</label>
+                    <input type="text" class="form-control" id="degree" name="degree">
+                    <span id="degreeError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="university">University:</label>
+                    <input type="text" class="form-control" id="university" name="university">
+                    <span id="universityError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="gradYear">Graduation Year:</label>
+                    <input type="number" class="form-control" id="gradYear" name="gradYear">
+                    <span id="gradYearError" class="error"></span>
+                </div>
+            </fieldset>
+
+            <!-- Professional Details -->
+            <fieldset>
+                <legend>Professional Details</legend>
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" class="form-control" id="company" name="company">
+                    <span id="companyError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position:</label>
+                    <input type="text" class="form-control" id="position" name="position">
+                    <span id="positionError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Years of Experience:</label>
+                    <input type="number" class="form-control" id="experience" name="experience">
+                    <span id="experienceError" class="error"></span>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Reset error messages
+            document.querySelectorAll('.error').forEach((element) => {
+                element.innerText = "";
+            });
+
+            // Personal Details
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const dob = document.getElementById('dob').value;
+
+            if (firstName === "") {
+                document.getElementById('firstNameError').innerText = "First name is required.";
+                isValid = false;
+            }
+
+            if (lastName === "") {
+                document.getElementById('lastNameError').innerText = "Last name is required.";
+                isValid = false;
+            }
+
+            if (phoneNumber === "") {
+                document.getElementById('phoneNumberError').innerText = "Phone number is required.";
+                isValid = false;
+            }
+
+            if (email === "") {
+                document.getElementById('emailError').innerText = "Email is required.";
+                isValid = false;
+            }
+
+            if (address === "") {
+                document.getElementById('addressError').innerText = "Address is required.";
+                isValid = false;
+            }
+
+            if (dob === "") {
+                document.getElementById('dobError').innerText = "Date of birth is required.";
+                isValid = false;
+            }
+
+            // Education Details
+            const degree = document.getElementById('degree').value.trim();
+            const university = document.getElementById('university').value.trim();
+            const gradYear = document.getElementById('gradYear').value;
+
+            if (degree === "") {
+                document.getElementById('degreeError').innerText = "Degree is required.";
+                isValid = false;
+            }
+
+            if (university === "") {
+                document.getElementById('universityError').innerText = "University is required.";
+                isValid = false;
+            }
+
+            if (gradYear === "") {
+                document.getElementById('gradYearError').innerText = "Graduation year is required.";
+                isValid = false;
+            }
+
+            // Professional Details
+            const company = document.getElementById('company').value.trim();
+            const position = document.getElementById('position').value.trim();
+            const experience = document.getElementById('experience').value;
+
+            if (company === "") {
+                document.getElementById('companyError').innerText = "Company is required.";
+                isValid = false;
+            }
+
+            if (position === "") {
+                document.getElementById('positionError').innerText = "Position is required.";
+                isValid = false;
+            }
+
+            if (experience === "") {
+                document.getElementById('experienceError').innerText = "Years of experience is required.";
+                isValid = false
+				}
+				return isValid;
+}
+
+            
+
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+//try block allows you to define block of code which may be proven to errors
+try{
+var name = prompt("Enter name");
+document.write("Hello "+ name);
+//catch allows you to define code to execute if an error occurs in try
+}catch(err){
+//error object have two properties name & message 
+document.write(err.name + " " + err.message);
+//document.write("Invalid function used ");
+}
+</script>
+</body>
+</html>

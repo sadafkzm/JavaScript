@@ -1,0 +1,33 @@
+<html>
+<body>
+<script>
+function checkk(num){
+if(!(num>=-200 && num<=100)){
+throw new RangeError("number must be between -200 & 100 ");
+}else{
+document.write(num + "<br>");
+}
+}
+
+try{
+checkk(-100);
+}catch(error){
+document.write(error);
+}
+
+function chek1(value){
+if(!["apple","banana","mango","grapes","watermelonn".includes(value)]){
+throw new RangeError("value must be same as above");
+}else{
+document.write(value);
+}
+}
+
+try{
+chek1("apple");
+}catch(error){
+document.write(error);
+}
+</script>
+</body>
+</html>
